@@ -19,9 +19,9 @@ function saveBookmark(e) {
     };
 
     /* Local storage test
-    localStorage.setItem('test', 'HEY BRO');
-    localStorage.getItem('test');
-    localStorage.removeItem('test'); 
+        localStorage.setItem('test', 'HEY BRO');
+        localStorage.getItem('test');
+        localStorage.removeItem('test'); 
     */
 
     // Test if bookmarks is null
@@ -44,6 +44,9 @@ function saveBookmark(e) {
         // Re-set back to LocalStorage
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
+
+    // Clear form
+    document.getElementById('myForm').reset();
 
     // Re-fetch bookmarks
     fetchBookmarks();
