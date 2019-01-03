@@ -1,0 +1,24 @@
+{
+  "name": "bookmarker",
+  "version": "1.0.0",
+  "description": "Link bookmarker",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rotimi-Best/bookmarker.git"
+  },
+  "keywords": [
+    "html",
+    "js",
+    "bookmarker"
+  ],
+  "author": "Rotimi-Best",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rotimi-Best/bookmarker/issues"
+  },
+  "homepage": "https://github.com/Rotimi-Best/bookmarker#readme"
+}
