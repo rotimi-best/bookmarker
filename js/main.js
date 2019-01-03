@@ -48,6 +48,26 @@ function saveBookmark(e) {
     e.preventDefault();
 }
 
+// Delete Bookmark
+function deleteBookmark(url) {
+    // Get bookmarks from LocalStorage
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+
+    // Loop through bookmarks
+    for (var i = 0; i < bookmarks.length; i++) {
+        if (bookmarks[i].url == url) {
+            // Remove from array
+            bookmarks.splice(i, 1);
+        }
+    }
+
+    // Re-set back to LocalStorage
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+
+    // Re-fetch bookmarks
+    fetchBookmarks();
+}
+
 function fetchBookmarks() {
     // Get bookmarks from LocalStorage
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
