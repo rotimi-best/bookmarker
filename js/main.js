@@ -23,7 +23,22 @@ function saveBookmark(e) {
     // Test if bookmarks is null
     if (localStorage.getItem('bookmarks') === null) {
         // Init bookmark array
-        
+        var bookmarks = [];
+
+        //Add to array
+        bookmarks.push(bookmark);
+
+        //Set to LocalStoraget
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    } else {
+        // Get bookmarks from LocalStorage
+        var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+
+        // Add bookmarks to array
+        bookmarks.push(bookmark);
+
+        //Re-set back to LocalStorage
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
     
     // Prevent form from submitting
